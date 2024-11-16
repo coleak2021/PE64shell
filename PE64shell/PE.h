@@ -11,7 +11,6 @@
 class CPE {
 public:
 
-    //函数声明
     CPE();
     BOOL Pack(CString strPath, const char* pass);
     void encryptCode(PGLOBAL_PARAM g_stcParam);
@@ -29,13 +28,12 @@ public:
     BOOL addimport(char* newtable, DWORD dwSize);
     DWORD findtablerva(DWORD size);
 
-    //变量声明
     ULONGLONG m_dwImageBase;
     DWORD m_dwOEP; //old oep
     DWORD m_dwCodeBase;//.text rva
     DWORD m_dwCodeSize;//.text size
     DWORD m_dwNewSectionRVA; //packer rva
-    DWORD m_dwNewOEP; //packer 中start 段rva
+    DWORD m_dwNewOEP; //packer start  rva in section
     //read file from computer
     CFile m_objFile;
     BYTE* m_pFileBase; //readbase

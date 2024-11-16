@@ -6,10 +6,10 @@ int main(int argc, char* argv[]) {
     CPE pe;
     bool result = pe.Pack(filePath, pass);
     if (result) {
-        std::cout << "加密成功！" << std::endl;
+        std::cout << "successful" << std::endl;
     }
     else {
-        std::cout << "加密失败！" << std::endl;
+        std::cout << "failed" << std::endl;
     }
     return 0;
 }
